@@ -6,11 +6,11 @@
 /*   By: tstewart <tstewart@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 22:27:34 by tstewart          #+#    #+#             */
-/*   Updated: 2024/12/05 23:03:12 by tstewart         ###   ########.fr       */
+/*   Updated: 2024/12/06 17:01:45 by tstewart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//#include "libft.h"
 
 int ft_atoi(const char *nptr) // nptr = number pointer
 {
@@ -50,7 +50,7 @@ int main(void)
     printf("Input: \"-0\" -> Output: %d\n", ft_atoi("-0"));
     printf("Input: \"2147483647\" -> Output: %d\n", ft_atoi("2147483647"));
     printf("Input: \"-2147483648\" -> Output: %d\n", ft_atoi("-2147483648"));
-    printf("Input: \"abc123\" -> Output: %d\n", ft_atoi("abc123"));
+    printf("Input: \"abc123\" -> Output: %d\n", ft_atoi("abc"));
     printf("Input: \"\" -> Output: %d\n", ft_atoi(""));
     printf("Input: \"   \" -> Output: %d\n", ft_atoi("   "));
     printf("Input: \"-000123\" -> Output: %d\n", ft_atoi("-000123"));
