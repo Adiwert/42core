@@ -6,11 +6,11 @@
 /*   By: tstewart <tstewart@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 22:27:34 by tstewart          #+#    #+#             */
-/*   Updated: 2024/12/06 17:01:45 by tstewart         ###   ########.fr       */
+/*   Updated: 2024/12/11 20:40:41 by tstewart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
+#include "libft.h"
 
 int ft_atoi(const char *nptr) // nptr = number pointer
 {
