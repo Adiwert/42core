@@ -6,22 +6,22 @@
 /*   By: tstewart <tstewart@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 17:54:42 by tstewart          #+#    #+#             */
-/*   Updated: 2024/12/06 18:10:45 by tstewart         ###   ########.fr       */
+/*   Updated: 2024/12/16 22:33:58 by tstewart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strdup(const char *str)
+char    *ft_strdup(const char *s)
 {
     char    *ptr;
     size_t  len;
 
-    len = ft_strlen(str);
+    len = ft_strlen(s);
     ptr = (char *)malloc((len + 1) * sizeof(char)); // +1 for null terminator
     if (ptr == NULL)
         return (NULL); // If malloc failed, return NULL
-    ft_strlcpy(ptr, str, len + 1); // Copy input string into newly allocated memory, +1 for null terminator
+    ft_strlcpy(ptr, s, len + 1); // Copy input string into newly allocated memory, +1 for null terminator
     return (ptr); // Return the pointer to the duplicated string
 }
 

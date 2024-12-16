@@ -6,13 +6,13 @@
 /*   By: tstewart <tstewart@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 19:57:27 by tstewart          #+#    #+#             */
-/*   Updated: 2024/12/04 21:55:29 by tstewart         ###   ########.fr       */
+/*   Updated: 2024/12/16 22:33:44 by tstewart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memmove(void *dest, const void  *src, size_t num)
+void    *ft_memmove(void *dest, const void  *src, size_t n)
 {
     size_t          i;
     unsigned char   *dest_p;
@@ -23,12 +23,12 @@ void    *ft_memmove(void *dest, const void  *src, size_t num)
     src_p = (unsigned char  *)src;
     if (dest_p > src_p) // Compares memory address and check whether overlap exists
     {
-        while (num--) // When overlapping, copy starts from last byte
-            dest_p[num] = src_p[num];
+        while (n--) // When overlapping, copy starts from last byte
+            dest_p[n] = src_p[n];
     }
     else
     {
-        while (i < num) // When no risk of overlapping, copy starts from first byte
+        while (i < n) // When no risk of overlapping, copy starts from first byte
         {
             dest_p[i] = src_p[i];
             i++;
