@@ -14,7 +14,7 @@
 
 t_list *ft_lstlast(t_list *lst)
 {
-    t_list  *current;
+    t_list *current;
     current = lst;
     if (lst == NULL)
         return (NULL);
@@ -23,8 +23,9 @@ t_list *ft_lstlast(t_list *lst)
     return (current);
 }
 
-
+/*
 #include <stdio.h>
+
 int main(void)
 {
     // Creating nodes
@@ -52,3 +53,4 @@ int main(void)
 
     return (0);
 }
+*/
