@@ -26,6 +26,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
     }
 }
 
+/*
 #include <stdio.h>
 
 int main(void)
@@ -54,3 +55,4 @@ int main(void)
     }
     return (0);
 }
+*/
