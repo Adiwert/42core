@@ -24,8 +24,8 @@ Using malloc(1) ensures ft_calloc behaves like glibc's calloc, which always retu
 Returning NULL might cause unexpected behavior in programs expecting a valid pointer.
 The allocated byte is still harmless and can be freed safely.
 */
-    if (nmemb && size > SIZE_MAX / nmemb)
-        return (NULL); // Safeguard from memory overflow
+    if ((nmemb) && size > SIZE_MAX / nmemb))
+        return (NULL); // Safeguard from memory overflow and 
     ptr = malloc(nmemb * size); // Allocate bytes to ptr
     if (ptr == NULL)
         return (NULL); // Return NULL if malloc() failed
