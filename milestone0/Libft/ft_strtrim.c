@@ -17,11 +17,11 @@ char    *ft_strtrim(char const *s1, char const *set)
     size_t  i;
     size_t  j;
     char    *str;
-
+    
+    if (s1 == NULL || set == NULL)
+        return (NULL); // This will help to safeguard segfault
     i = 0;
     j = ft_strlen(s1);
-    if (s1 == NULL || set == NULL)
-        return (NULL);
     // Move i forward past the characters that are in 'set'
     while (s1[i] != '\0' && ft_strchr(set, s1[i]))
         i++;
