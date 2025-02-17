@@ -26,10 +26,8 @@ char    *ft_strtrim(char const *s1, char const *set)
     while (s1[i] != '\0' && ft_strchr(set, s1[i]))
         i++;
     // Move j backward past the characters that are in 'set'
-    while (s1[j - i] != '\0' && ft_strchr(set, s1[j - 1]) && j > i)
+    while (j > i && ft_strchr(set, s1[j - 1]))
         j--;
-    if (i == j)
-        return (ft_strdup(""));
     str = (char *)malloc((j - i + 1) * sizeof(char));
     if (str == NULL)
         return (NULL);
