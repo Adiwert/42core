@@ -17,9 +17,15 @@ void    *ft_calloc(size_t nmemb, size_t size)
     char    *ptr; // ptr holds the allocated memory
 
     if (nmemb == 0 || size == 0)
-        return (NULL); // Return NULL or call malloc(0)
-    if (size * nmemb > (size_t) - 1)
-        return (NULL); // Safeguard from memory overflow
+        return (malloc(1)); 
+/*
+According to the C standard, if either nmemb == 0 or size == 0, calloc may return either NULL or a unique pointer that can be safely freed.
+Using malloc(1) ensures ft_calloc behaves like glibc's calloc, which always returns a valid pointer.
+Returning NULL might cause unexpected behavior in programs expecting a valid pointer.
+The allocated byte is still harmless and can be freed safely.
+*/
+    if ((nmemb) && size > SIZE_MAX / nmemb))
+        return (NULL); // Safeguard from memory overflow and 
     ptr = malloc(nmemb * size); // Allocate bytes to ptr
     if (ptr == NULL)
         return (NULL); // Return NULL if malloc() failed

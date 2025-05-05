@@ -16,13 +16,16 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 {
     t_list *current;
 
+    if (lst == NULL || new == NULL) // Prevent dereferencing NULL pointer, and safeguard from segfault
+		return ;
     if (*lst == NULL)
         *lst = new;
     else
     {
         current = *lst;
         current = ft_lstlast(current);
-        current->next = new;
+        if (current != NULL)
+            current->next = new; // Ensure the next node exists
     }
 }
 
